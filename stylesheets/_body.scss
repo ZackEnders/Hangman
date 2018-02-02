@@ -1,0 +1,32 @@
+#guesses {
+	display:inline-block;
+	font-size: 80px;
+	text-transform: uppercase;
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+#startButton {
+	@include centerText;
+	@include centerBox;
+	width: 100px;
+	border: 3px solid black;
+	margin-bottom: 50px;
+}
+
+#mainBox {
+	@include centerText;
+	font-size:100px;
+}
+
+
+
+
+
+
+
+
+.wrongLetters {
+	font:40px bold;
+	text-decoration: underline;
+}

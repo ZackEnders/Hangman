@@ -1,0 +1,11 @@
+#keyPress{
+	position: fixed;
+	left: 0;
+	top: 0;
+	font: 24px bold;
+	text-transform: uppercase;
+}
+
+#header {
+	@include centerText;
+}
