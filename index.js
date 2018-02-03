@@ -14,7 +14,7 @@ var hintsDisplay = [];
 var key;
 var guessCounter = document.getElementById('guessCounter')
 var guessLeft = 3;
-guessCounter.innerHTML = guessLeft;
+	guessCounter.innerHTML = guessLeft;
 
 startButton.addEventListener('click', function(){
 	answer = words[randomWord]
@@ -26,15 +26,11 @@ startButton.addEventListener('click', function(){
 		}
 
 	mainBox.innerHTML = answerDisplay.join(' ');
-	console.log(answer)
-	console.log(answerDisplay.join(''))
-
+	
 document.addEventListener('keydown', function(x){
+
 	var bool = false;
 	key = x.key.toUpperCase()
-
-
-
 
 	if(/[^a-zA-Z]/.test(key) || (key == 'META') || (key == 'ALT') || (key == 'CONTROL') || (key == 'BACKSPACE') || (key == 'ENTER') || (key == 'SHIFT') || (key == 'TAB') || (key == ' ')){
 
@@ -69,6 +65,7 @@ document.addEventListener('keydown', function(x){
 					return;
 
 			}else if (answer[i] != key){
+				
 				if (wrongGuess.length == 2){
 					setTimeout(function(){alert('LOSER! TRY AGAIN.')})
 					window.location.reload();
@@ -77,84 +74,17 @@ document.addEventListener('keydown', function(x){
 					guessCounter.innerHTML = guessLeft;
 					wrongGuess.push(key + ' ');
 					guesses.innerHTML = wrongGuess.join(' ')
-					return
-					
-				
+					return	
 			}
 		}			
-		notAletter.innerHTML = '';
+			notAletter.innerHTML = '';
 	}
-
 })
 })
 console.log(words[randomWord].split(''));
 
 
 
-// var Game = {
-
-
-// 	startBtn: function(){
-// 		document.addEventListener('keydown', function(x){
-
-// 	key = x.key.toUpperCase()
-// 	if(/[^a-zA-Z]/.test(key) || (key == 'META') || (key == 'ALT') || (key == 'CONTROL') || (key == 'BACKSPACE') || (key == 'ENTER') || (key == 'SHIFT') || (key == 'TAB') || (key == ' ')){
-
-// 		notAletter.innerHTML = key + ` is not a letter!`;
-
-// 	}else{
-// 		keyPress.innerHTML = key ;
-// 		notAletter.innerHTML = '';
-// 	}
-// 	for(var i = 0; i < answer.length; i++){
-// 			if(key == answer[i]){
-// 				answerDisplay[i] = key
-// 				mainBox.innerHTML = answerDisplay.join(' ')
-// 				return
-// 			}
-// 	}
-
-// 	for(var a = 0; a < answer.length; a++){
-// 			if (answer[i] != key && /[^a-zA-Z]/.test(key) ){
-// 				return
-// 			}else if ((key == 'META') || (key == 'ALT') || (key == 'CONTROL') || (key == 'BACKSPACE') || (key == 'ENTER') || (key == 'SHIFT') || (key == 'TAB') || (key == ' ')){
-// 					return
-// 			}else if (answer[i] != key){
-// 				wrongGuess.push(key + ' ');
-// 				guesses.innerHTML = wrongGuess.join(' ')
-// 				return
-// 			}
-// 		}	
-				
-// 				notAletter.innerHTML = '';
-
-// })
-// 	}
-// }
-
-
-
-
-
-
-// document.addEventListener('keydown', function(x){
-// 	// var array = 'dog';
-// 	if(/[^a-zA-Z]/.test(x.key) || (x.key === 'Meta') || (x.key === 'Alt') || (x.key === 'Control') || (x.key === 'Backspace') || (x.key === 'Enter') || (x.key === 'Shift') || (x.key === 'Tab') || (x.key === ' ')){
-
-// 		notAletter.innerHTML = x.key + ` is not a letter!`;
-
-// 	}else{
-// 		// for(var i = 0; i < .length; i++){
-// 		// 	if (array[i] == x.key){
-// 		// 		console.log('g')
-// 		// }
-// 	// }
-// 		keyPress.innerHTML = x.key ;
-// 		notAletter.innerHTML = '';
-// 	}
-// })
-
-// replaceAt()
 
 
 
@@ -167,17 +97,7 @@ console.log(words[randomWord].split(''));
 
 
 
-// document.addEventListener('keydown', function(x){
-// 			if(/[^a-zA-Z]/.test(x.key) || (x.key === 'Meta') || (x.key === 'Alt') || (x.key === 'Control') || (x.key === 'Backspace') || (x.key === 'Enter') || (x.key === 'Shift') || (x.key === 'Tab') || (x.key === ' ')){
-						
-// 				notAletter.innerHTML = x.key + ` is not a letter!`;
-// 			}else{
-// 				wrongGuess.push(x.key + ' ');
-// 				guesses.innerHTML = wrongGuess.join('');
-// 				notAletter.innerHTML = '';
-// 				console.log(x)
-// 			}
-// 		})
+
 
 
 

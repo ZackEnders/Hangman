@@ -1,11 +1,16 @@
-#guesses {
-	display:inline-block;
-	font-size: 40px;
-	text-transform: uppercase;
-	margin-top: 50px;
-	padding-top: 50px;
+
+
+html{
+	background: url('../img/limbo3.jpg')no-repeat center center fixed;
+	background-color: balck;
+	color: white;
 }
 
+
+#guesses {
+	font-size: 40px;
+	text-transform: uppercase;
+}
 .button {
 	@include centerText;
 	@include centerBox;
@@ -15,6 +20,7 @@
 }
 
 #guessCounter {
+	@include centerText;
 	font-size: 40px;
 }
 #mainBox {
@@ -30,5 +36,27 @@
 }
 .wrongLetters {
 	font:20px bold;
-	text-decoration: underline;
+	// text-decoration: underline;
+	position: fixed;
+	right: 30%;
+	bottom: 30%;
 }
+.wrongLetters2 {
+	font:20px bold;
+	// text-decoration: underline;
+	position: fixed;
+	left: 30%;
+	bottom: 30%;
+}
+
+
+#box {
+	@include centerBox;
+	width: 600px;
+	height: 300px;
+}
+
+
+
+
+
