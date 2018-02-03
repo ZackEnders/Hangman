@@ -6,7 +6,7 @@
 	padding-top: 50px;
 }
 
-#startButton {
+.button {
 	@include centerText;
 	@include centerBox;
 	width: 100px;
@@ -14,6 +14,9 @@
 	margin-bottom: 50px;
 }
 
+#guessCounter {
+	font-size: 40px;
+}
 #mainBox {
 	@include centerText;
 	font-size:100px;

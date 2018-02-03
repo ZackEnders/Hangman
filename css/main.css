@@ -15,12 +15,15 @@
   margin-top: 50px;
   padding-top: 50px; }
 
-#startButton {
+.button {
   text-align: center;
   margin: 0 auto;
   width: 100px;
   border: 3px solid black;
   margin-bottom: 50px; }
+
+#guessCounter {
+  font-size: 40px; }
 
 #mainBox {
   text-align: center;
