@@ -6,8 +6,6 @@
 html{
 	font-family: 'limbo';
 	background: url('../img/limbo3.jpg')no-repeat center center fixed;
-	background-color: balck;
-	;
 }
 
 h1 {
@@ -23,6 +21,11 @@ h2{
 	color: $fontRed;
 }
 
+#wrapper {
+	@include centerBox;
+	width: 100%;
+}
+
 #guesses {
 	font-size: 40px;
 	color: $fontRed;
@@ -35,7 +38,7 @@ h2{
 	width: 100px;
 	padding: 10px;
 	border: 3px solid #1D1D1D;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	display: block;
 }
 
@@ -46,7 +49,7 @@ h2{
 }
 #mainBox {
 	@include centerText;
-	font-size:100px;
+	font-size: 100px;
 	color: #393939;
 }
 #hint {
