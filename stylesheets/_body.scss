@@ -1,52 +1,82 @@
-
-
-html{
-	background: url('../img/limbo3.jpg')no-repeat center center fixed;
-	background-color: balck;
-	color: white;
+@fontface {
+	font-family: 'limbo';
+	src: url('../css/fonts/limbo.ttf');
 }
 
+html{
+	font-family: 'limbo';
+	background: url('../img/limbo3.jpg')no-repeat center center fixed;
+}
+
+h1 {
+	text-decoration: underline;
+	font-size: 60px;
+	color: #1D1D1D;
+	margin-bottom: 5px;
+}
+
+h2{
+	font-size: 20px;
+	line-height: 40px;
+	color: $fontRed;
+}
+
+#wrapper {
+	@include centerBox;
+	width: 100%;
+}
 
 #guesses {
 	font-size: 40px;
+	color: $fontRed;
 	text-transform: uppercase;
 }
 .button {
 	@include centerText;
 	@include centerBox;
+	color: #1D1D1D;
 	width: 100px;
-	border: 3px solid black;
-	margin-bottom: 50px;
+	padding: 10px;
+	border: 3px solid #1D1D1D;
+	margin-bottom: 100px;
+	display: block;
 }
 
 #guessCounter {
 	@include centerText;
 	font-size: 40px;
+	color: $fontRed;
 }
 #mainBox {
 	@include centerText;
-	font-size:100px;
+	font-size: 100px;
+	color: #393939;
 }
 #hint {
 	@include centerText;
+	padding: 40px 0 20px;
+	color: $fontRed;
 }
 #notAletter {
 	@include centerText;
-	margin-bottom: 10px;
+	margin: 10px;
+	color: $fontRed;
 }
 .wrongLetters {
 	font:20px bold;
-	// text-decoration: underline;
+	color: #8D8D8D;
+	font-family: 'limbo';
 	position: fixed;
-	right: 30%;
-	bottom: 30%;
+	left: 30%;
+	bottom: 5%;
 }
 .wrongLetters2 {
 	font:20px bold;
-	// text-decoration: underline;
+	color: #8D8D8D;
+	font-family: 'limbo';
 	position: fixed;
-	left: 30%;
-	bottom: 30%;
+	right: 30%;
+	bottom: 5%;
 }
 
 

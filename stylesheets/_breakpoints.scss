@@ -1,0 +1,26 @@
+
+
+@media all and (max-width: 992px) and (min-width: 769px) {
+
+h2 {
+	font-size: 18px;
+}
+
+#wrapper {
+	@include centerBox;
+	width: 100%;
+}
+
+.button {
+	margin-bottom: 100px;
+}
+
+.wrongLetters2 {
+	right:20%;
+}
+
+.wrongLetters {
+	left: 20%;
+}
+
+}

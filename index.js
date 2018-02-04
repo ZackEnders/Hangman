@@ -5,28 +5,30 @@ var mainBox = document.getElementById('mainBox');
 var hint = document.getElementById('hint');
 var notAletter = document.getElementById('notAletter');
 var words = ['DOG','APPLE','TRUCK','BASKET','PHONE','SUBWAY'];
-var hints = ['An animal that loves to play fetch.','Falls from a tree and you can eat it.','Vehicle bigger than a car.','Something you can carry stuff in.','You use this device everyday.',`Public transportation that's underground.`];
+var hints = ['An animal that loves to play fetch','Falls from a tree','A vehicle bigger than a car','Something you can carry stuff in','You use this device everyday','Public transportation that is underground'];
 var randomWord = Math.floor(Math.random() * words.length);
 var wrongGuess = [];
 var answerDisplay = [];
 var answer = [];
 var hintsDisplay = [];
 var key;
-var guessCounter = document.getElementById('guessCounter')
+var guessCounter = document.getElementById('guessCounter');
 var guessLeft = 3;
-	guessCounter.innerHTML = guessLeft;
-
+	
 startButton.addEventListener('click', function(){
-	answer = words[randomWord]
-	hintsDisplay.push(hints[randomWord])
+	window.location.reload();
+})
+	guessCounter.innerHTML = guessLeft;
+	answer = words[randomWord];
+	hintsDisplay.push(hints[randomWord]);	
 	hint.innerHTML = hintsDisplay;
-
+	
 		for(var i = 0; i < answer.toString().split('').length; i++){
 			answerDisplay.push('_');
 		}
-
-	mainBox.innerHTML = answerDisplay.join(' ');
 	
+	mainBox.innerHTML = answerDisplay.join(' ');
+
 document.addEventListener('keydown', function(x){
 
 	var bool = false;
@@ -80,8 +82,7 @@ document.addEventListener('keydown', function(x){
 			notAletter.innerHTML = '';
 	}
 })
-})
-console.log(words[randomWord].split(''));
+// console.log(words[randomWord].split(''));
 
 
 
