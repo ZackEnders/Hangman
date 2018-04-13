@@ -37,7 +37,7 @@
 		<div class="modal-guts">
 			<div id="closeWin" class="close">&times;</div>
 			<div class="modal-font">You live to see another day!</div>
-			<div class="smile"></div>
+			<div id="smile"></div>
 			<div id="playAgainWin" class="play-again">Play again?</div>
 		</div>
 	</div>
@@ -46,7 +46,7 @@
 		<div class="modal-guts">
 			<div id="closeLose" class="close">&times;</div>
 			<div class="modal-font">You have died!</div>
-			<div class="frown"></div>
+			<div id="frown"></div>
 			<div id="playAgainLose" class="play-again">Play again?</div>
 		</div>
 	</div>
@@ -61,12 +61,18 @@ document.getElementById('closeWin').addEventListener("click", function() {
 document.getElementById("playAgainWin").addEventListener("click", function() {
 	document.location.reload();
 });
+document.getElementById("smile").addEventListener("click", function() {
+	document.location.reload();
+});
 //Lose modal close and play again button
 document.getElementById('closeLose').addEventListener("click", function() {
 	document.getElementById('loseModal').style.display = "none";
 });
 
 document.getElementById("playAgainLose").addEventListener("click", function() {
+	document.location.reload();
+});
+document.getElementById("frown").addEventListener("click", function() {
 	document.location.reload();
 });
 

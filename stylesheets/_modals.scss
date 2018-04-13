@@ -51,19 +51,22 @@
     cursor: pointer;
 }
 
-.smile {
+#smile {
     width: 200px;
     height: 200px;
     background-image: url("../img/smile.png");
     background-size: cover;
     background-position: center;
     float: right;
+    cursor: pointer;
 }
-.frown {
+#frown {
     width: 200px;
     height: 200px;
     background-image: url("../img/frown.png");
     background-size: cover;
     background-position: center;
     float: right;
+    cursor: pointer;
 }
+
