@@ -67,6 +67,7 @@ document.addEventListener("keydown", function(x) {
 			bool = true;
 			if (answer === answerDisplay.join("")) {
 				winner.style.display = "block";
+				keyPress = null;
 			}
 		}
 	}
@@ -89,6 +90,7 @@ document.addEventListener("keydown", function(x) {
 			} else if (answer[i] != key) {
 				if (wrongGuess.length == 2) {
 					loser.style.display = "block";
+					keyPress = null;
 				}
 				guessLeft--;
 				guessCounter.innerHTML = guessLeft;
