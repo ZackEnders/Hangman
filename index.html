@@ -6,22 +6,67 @@
 </head>
 <body>
 	<div id="wrapper">
-<header id="header">
-	<div id="keyPress"></div>
-	<h1><span>Hangman</span></h1>
-	<h2>Use the keyboard to select the letters of your choice. If you choose 3 wrong letters it's game over! <br/>The new word button loads a new word.  <br/>Goodluck!</h2>
-	<p></p>
-</header>
-</div>
-<div id="startButton" class="button">new word</div>
+		<header id="header">
+			<div id="keyPress"></div>
+			<h1>Hangman</h1>
+			<h2>Use the keyboard to select the letters of your choice.<br/> If you choose 3 wrong letters it's game over! <br/>The new word button loads a new word.  <br/>Goodluck!</h2>
+		</header>
+	</div>
+	<div id="new-word" class="button">new word</div>
 
-<div class="wrongLetters">WRONG GUESSES LEFT <div id="guessCounter"></div></div>
-<div class="wrongLetters2">WRONG LETTERS GUESSED <div id="guesses"> <br/> </div></div>
- <div id="box">
-<div id="mainBox"></div>
-<div id ="hint"></div>
-<div id="notAletter"></div>
-</div>
+	<div id="box">
+		<div id="mainBox"></div>
+			<div id="hint"></div>
+		<div id="notAletter"></div>
+	</div>
+	
+	<div class="wrongLetters">WRONG GUESSES LEFT 
+		<div id="guessCounter">
+		</div>
+	</div>
+
+	<div class="wrongLetters2">WRONG LETTERS GUESSED
+	 <div id="guesses"> 
+	 	<br/> 
+	 </div>
+	</div>
+
+	<div id="winModal" class="modal">
+		<div class="modal-guts">
+			<div id="close" class="close">&times;</div>
+			<div class="modal-font">You live to see another day!</div>
+			<div class="smile"></div>
+			<div id="playAgain" class="play-again">Play again?</div>
+		</div>
+	</div>
+
+	<div id="loseModal" class="modal">
+		<div class="modal-guts">
+			<div id="close" class="close">&times;</div>
+			<div class="modal-font">You have died!</div>
+			<div class="frown"></div>
+			<div id="PlayAgain" class="play-again">Play again?</div>
+		</div>
+	</div>
+
 <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+	//Win modal close and play again button
+document.getElementById('close').addEventListener("click", function() {
+	document.getElementById('winModal').style.display = "none";
+});
+document.getElementById('playAgain').addEventListener("click", function() {
+	document.location.reload();
+});
+
+//Lose modal close and play again button
+document.getElementById('close').addEventListener("click", function() {
+	document.getElementById('loseModal').style.display = "none";
+});
+document.getElementById('playAgain').addEventListener("click", function() {
+	document.location.reload();
+});
+
+</script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+#winModal {
+    display: none;
+}
+#loseModal {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-guts {
+    background-color: #292929;
+    margin: 10% auto;
+    padding: 0 20px;
+    border: 1px solid $fontRed;
+    width: 50%;
+    height: 200px;
+}
+
+.modal-font {
+    font-size: 30px;
+    color: $fontRed;
+    display: inline-block;
+    line-height: 200px;
+}
+.play-again {
+    font-size: 18px;
+    color: $fontRed;
+    line-height: 200px;
+    float: right;
+    cursor: pointer;
+}
+
+.close {
+    color: $fontRed;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    position: fixed;
+    top: auto;
+    left: auto;
+    cursor: pointer;
+}
+
+.smile {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/smile.png");
+    background-size: cover;
+    background-position: center;
+    float: right;
+}
+.frown {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/frown.png");
+    background-size: cover;
+    background-position: center;
+    float: right;
+}

@@ -9,22 +9,26 @@
   text-align: center; }
 
 @fontface {
-  font-family: 'limbo';
+  font-family: "limbo";
   src: url("../css/fonts/limbo.ttf"); }
 html {
-  font-family: 'limbo';
+  font-family: "limbo";
   background: url("../img/limbo3.jpg") no-repeat center center fixed; }
 
 h1 {
   text-decoration: underline;
   font-size: 60px;
-  color: #1D1D1D;
-  margin-bottom: 5px; }
+  color: #292929;
+  margin-bottom: 5px;
+  text-shadow: -1px 0 #ff4444, 0 1px #ff4444, 1px 0 #ff4444, 0 -1px #ff4444;
+  letter-spacing: 3px; }
 
 h2 {
   font-size: 20px;
   line-height: 40px;
-  color: #ff4444; }
+  color: #ff4444;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 2px; }
 
 #wrapper {
   margin: 0 auto;
@@ -38,12 +42,14 @@ h2 {
 .button {
   text-align: center;
   margin: 0 auto;
-  color: #1D1D1D;
+  color: #ff4444;
   width: 100px;
   padding: 10px;
-  border: 3px solid #1D1D1D;
+  background-color: #292929;
+  border-radius: 5px;
   margin-bottom: 100px;
-  display: block; }
+  display: block;
+  cursor: pointer; }
 
 #guessCounter {
   text-align: center;
@@ -53,30 +59,35 @@ h2 {
 #mainBox {
   text-align: center;
   font-size: 100px;
-  color: #393939; }
+  color: #292929; }
 
 #hint {
   text-align: center;
   padding: 40px 0 20px;
-  color: #ff4444; }
+  color: #ff4444;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 2px;
+  font-size: 20px; }
 
 #notAletter {
   text-align: center;
   margin: 10px;
-  color: #ff4444; }
+  color: #ff4444;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  letter-spacing: 2px; }
 
 .wrongLetters {
   font: 20px bold;
-  color: #8D8D8D;
-  font-family: 'limbo';
+  color: #8d8d8d;
+  font-family: "limbo";
   position: fixed;
   left: 30%;
   bottom: 5%; }
 
 .wrongLetters2 {
   font: 20px bold;
-  color: #8D8D8D;
-  font-family: 'limbo';
+  color: #8d8d8d;
+  font-family: "limbo";
   position: fixed;
   right: 30%;
   bottom: 5%; }
@@ -102,5 +113,68 @@ h2 {
 
   .wrongLetters {
     left: 20%; } }
+#winModal {
+  display: none; }
+
+#loseModal {
+  display: none; }
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.modal-guts {
+  background-color: #292929;
+  margin: 10% auto;
+  padding: 0 20px;
+  border: 1px solid #ff4444;
+  width: 50%;
+  height: 200px; }
+
+.modal-font {
+  font-size: 30px;
+  color: #ff4444;
+  display: inline-block;
+  line-height: 200px; }
+
+.play-again {
+  font-size: 18px;
+  color: #ff4444;
+  line-height: 200px;
+  float: right;
+  cursor: pointer; }
+
+.close {
+  color: #ff4444;
+  font-size: 28px;
+  font-weight: bold;
+  display: inline-block;
+  position: fixed;
+  top: auto;
+  left: auto;
+  cursor: pointer; }
+
+.smile {
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/smile.png");
+  background-size: cover;
+  background-position: center;
+  float: right; }
+
+.frown {
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/frown.png");
+  background-size: cover;
+  background-position: center;
+  float: right; }
 
 /*# sourceMappingURL=main.css.map */

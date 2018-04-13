@@ -1,24 +1,28 @@
 @fontface {
-	font-family: 'limbo';
-	src: url('../css/fonts/limbo.ttf');
+	font-family: "limbo";
+	src: url("../css/fonts/limbo.ttf");
 }
 
-html{
-	font-family: 'limbo';
-	background: url('../img/limbo3.jpg')no-repeat center center fixed;
+html {
+	font-family: "limbo";
+	background: url("../img/limbo3.jpg") no-repeat center center fixed;
 }
 
 h1 {
 	text-decoration: underline;
 	font-size: 60px;
-	color: #1D1D1D;
+	color: #292929;
 	margin-bottom: 5px;
+	text-shadow: -1px 0 $fontRed, 0 1px $fontRed, 1px 0 $fontRed, 0 -1px $fontRed;
+	letter-spacing: 3px;
 }
 
-h2{
+h2 {
 	font-size: 20px;
 	line-height: 40px;
 	color: $fontRed;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 2px;
 }
 
 #wrapper {
@@ -34,12 +38,14 @@ h2{
 .button {
 	@include centerText;
 	@include centerBox;
-	color: #1D1D1D;
+	color: $fontRed;
 	width: 100px;
 	padding: 10px;
-	border: 3px solid #1D1D1D;
+	background-color: #292929;
+	border-radius: 5px;
 	margin-bottom: 100px;
 	display: block;
+	cursor: pointer;
 }
 
 #guessCounter {
@@ -50,43 +56,42 @@ h2{
 #mainBox {
 	@include centerText;
 	font-size: 100px;
-	color: #393939;
+	color: #292929;
 }
 #hint {
 	@include centerText;
 	padding: 40px 0 20px;
 	color: $fontRed;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 2px;
+	font-size: 20px;
 }
 #notAletter {
 	@include centerText;
 	margin: 10px;
 	color: $fontRed;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	letter-spacing: 2px;
 }
 .wrongLetters {
-	font:20px bold;
-	color: #8D8D8D;
-	font-family: 'limbo';
+	font: 20px bold;
+	color: #8d8d8d;
+	font-family: "limbo";
 	position: fixed;
 	left: 30%;
 	bottom: 5%;
 }
 .wrongLetters2 {
-	font:20px bold;
-	color: #8D8D8D;
-	font-family: 'limbo';
+	font: 20px bold;
+	color: #8d8d8d;
+	font-family: "limbo";
 	position: fixed;
 	right: 30%;
 	bottom: 5%;
 }
-
 
 #box {
 	@include centerBox;
 	width: 600px;
 	height: 300px;
 }
-
-
-
-
-
