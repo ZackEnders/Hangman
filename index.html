@@ -56,7 +56,7 @@
 <script>
 	//Win modal close and play again button
 document.getElementById('closeWin').addEventListener("click", function() {
-	document.getElementById('winModal').style.display = "none";
+	document.location.reload();
 });
 
 document.getElementById("playAgainWin").addEventListener("click", function() {
@@ -67,7 +67,7 @@ document.getElementById("smile").addEventListener("click", function() {
 });
 //Lose modal close and play again button
 document.getElementById('closeLose').addEventListener("click", function() {
-	document.getElementById('loseModal').style.display = "none";
+	document.location.reload();
 });
 
 document.getElementById("playAgainLose").addEventListener("click", function() {
